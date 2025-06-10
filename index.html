@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>⚠️ Security Alert</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1b1b1b;
+      font-family: "Segoe UI", sans-serif;
+      color: white;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #292929;
+      border: 2px solid #d90000;
+      border-radius: 10px;
+      box-shadow: 0 0 25px red;
+    }
+
+    h1 {
+      color: #ff4c4c;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .alert-text {
+      font-size: 1em;
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-left: 5px solid #ff4c4c;
+      margin-bottom: 25px;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #444;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background-color: #ff4c4c;
+      animation: fillProgress 7200s linear forwards;
+    }
+
+    @keyframes fillProgress {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    .log {
+      background-color: #121212;
+      border-left: 5px solid #ff4c4c;
+      padding: 15px;
+      font-size: 0.9em;
+      height: 180px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      margin-bottom: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .reveal {
+      background-color: #003300;
+      color: #b2ffb2;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚠️ CRITICAL SECURITY ALERT</h1>
+    <div class="alert-text">
+Your computer has been compromised by multiple unauthorized remote attackers. Our monitoring systems have detected persistent intrusions attempting to extract sensitive information including passwords, financial data, and private documents. 
+Malicious software is currently running undetected in the background, allowing hackers full access to your webcam, microphone, and keyboard inputs. Your browsing activity and personal communications are being recorded in real-time. 
+Immediate action is required: continuing to use this device may result in irreversible data loss and identity theft. Your device’s IP address and physical location have been logged and transmitted to external command and control servers. 
+Attempts to isolate and contain the threat have failed. This security breach affects core system files and encryption keys, which compromises your system integrity. For your safety, disconnect from the internet now and contact Microsoft Windows Technical Support at <b>1-800-555-0199</b>. 
+Failure to do so may lead to permanent damage to your system and the exposure of sensitive information to malicious third parties. This alert is generated automatically in accordance with Windows Security Protocol #0xAA443 and will not disappear until resolved.
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+
+    <div class="log" id="log">
+      [00:00:01] Initializing deep scan...  
+      [00:00:04] Scanning open network ports  
+      [00:00:07] Unauthorized IP activity: 203.0.113.54  
+      [00:00:10] Webcam triggered — image capture attempt blocked  
+      [00:00:14] Suspicious device connected via USB  
+      [00:00:20] Malicious executable detected: keylogger.exe  
+      [00:00:27] Remote shell access detected  
+      [00:00:33] WARNING: Hackers may be actively viewing your screen  
+      [00:00:50] Encrypting suspicious behavior logs...  
+      [00:01:10] External server communication flagged as HIGH RISK  
+      [00:01:40] Continuing scan...
+    </div>
+
+    <div class="reveal hidden" id="reveal">
+      HA HA You really thought
+    </div>
+  </div>
+
+  <script>
+    // Reveal prank message after 2 hours (7200000 ms)
+    setTimeout(() => {
+      document.getElementById("reveal").classList.remove("hidden");
+    }, 7200000); // 2 hours
+  </script>
+</body>
+</html>
